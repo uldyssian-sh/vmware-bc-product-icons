@@ -1,6 +1,7 @@
 # VMware BC Product Icons
 
-**Author:** LT  
+**Author:** `LT`
+**Version:** `1.0`
 
 ## Disclaimer
 
