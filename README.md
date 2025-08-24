@@ -1,14 +1,5 @@
 # VMware BC Product Icons
 
-**Author:** `LT`
-**Version:** `1.0`
-
-## Disclaimer
-
-This repository is provided *as is*, without warranty of any kind. Use it at your own risk. You are solely responsible for reviewing, testing, and implementing it in your own environment.
-
----
-
 ## Overview
 
 This repository contains a collection of Broadcom / VMware product icons in PNG format.  
