@@ -9,6 +9,14 @@ The icons have been cleaned (transparent background) and are organized under the
 
 ---
 
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+Copyright (c) 2025 LT
+
+---
+
 ## Available Icons
 
 Below is the current list of included icons:
