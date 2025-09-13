@@ -18,8 +18,6 @@ Here is a current list of included icons:
 
 aira_operations · antrea · app_launchpad · aria_automation · aria_hub · aria · assembler · avi_kubernetes_operator · avs_azure · aws_vmware · broadcom · carbon_black_cloud · carbon_black · cloud_director_availability · cloud_flex_storage · cloud_provider_lifecycle_manager · dell_vmware · edge_compute_stack · edge_network_intelligence · esxi_8 · greenplum · hcx · horizon · live_recovery · log_insight · network_insight · nsx_alb · nsx_ids_ips · nsx_sdn_firewall · NSX · nsx+ · pipelines · powercli · private_ai_foundation · sase_orchestrator · sase · sd-wan · sdwan_for_managed_service_provider · service_broker · tanzu_k8s_grid · tanzu_mission_control · tanzu_observability · tanzu · unknown / unknown2 / unknown3 · usage_meter · validated_solution · vcd_service · vcd · vcenter · vcf · vDefend_firewall · vmware_cloud · vro · vsan_big · vsphere_big · workspace_one_trust_network · workspace_one
 
-<img width="778" height="498" alt="481364770-cbc1effa-3a72-4c93-8a17-9981366af32d" src="https://github.com/user-attachments/assets/a57ff779-abf8-4a75-8611-f8a2f57cb377" />
-
 ---
 
 ## 🛠️ Usage
