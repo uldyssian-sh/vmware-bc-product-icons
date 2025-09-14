@@ -34,6 +34,7 @@ jobs:
           sarif_file: "trivy-results.sarif"
 
       - name: Run Semgrep
+        if: env.SEMGREP_APP_TOKEN != ''
         uses: semgrep/semgrep-action@v1
         with:
           config: >-
