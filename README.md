@@ -47,7 +47,6 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
 
 ## 🆘 Support
 
-- 📧 **Email**: support@uldyssian-sh.com
 - 🐛 **Issues**: [GitHub Issues](https://github.com/uldyssian-sh/vmware-bc-product-icons/issues)
 - 📖 **Documentation**: [Wiki](https://github.com/uldyssian-sh/vmware-bc-product-icons/wiki)
 
