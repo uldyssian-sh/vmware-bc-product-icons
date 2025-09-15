@@ -6,8 +6,8 @@
 
 ## 🔍 Overview
 
-This repository contains a collection of Broadcom / VMware product icons in **PNG format**.  
-These icons are clean (transparent background) and organized in the `vmware-icons` folder.  
+This repository contains a collection of Broadcom / VMware product icons in **PNG format**.
+These icons are clean (transparent background) and organized in the `vmware-icons` folder.
 They can be used to create professional diagrams, documentation, or presentations.
 
 ---
@@ -24,10 +24,10 @@ aira_operations · antrea · app_launchpad · aria_automation · aria_hub · ari
 
 You can use these icons in:
 
-- Microsoft Visio diagrams  
-- OmniGraffle diagrams  
-- draw.io / diagrams.net  
-- Documentation and presentation slides  
+- Microsoft Visio diagrams
+- OmniGraffle diagrams
+- draw.io / diagrams.net
+- Documentation and presentation slides
 
 ---
 
@@ -35,23 +35,23 @@ You can use these icons in:
 
 If you would like to add more Broadcom / VMware product icons or update existing ones:
 
-1. 🍴 Fork this repository.  
-2. 🖼️ Add or modify icons in the `vmware-icons` folder.  
+1. 🍴 Fork this repository.
+2. 🖼️ Add or modify icons in the `vmware-icons` folder.
 3. 🔀 Submit a pull request.
 
 ---
 
 ## ⚠️ Notes
 
-- These icons are **not official VMware assets**.  
-- For official diagrams and branding, always refer to VMware documentation and Broadcom resources.  
+- These icons are **not official VMware assets**.
+- For official diagrams and branding, always refer to VMware documentation and Broadcom resources.
 
 ---
 
 ## 📜 License & Legal
 
-- Documentation here is for informational/non-commercial use (or your usage context).  
-- Copyright for VMware/Broadcom icons remains with VMware/Broadcom.  
+- Documentation here is for informational/non-commercial use (or your usage context).
+- Copyright for VMware/Broadcom icons remains with VMware/Broadcom.
 - Redistribution of official or trademarked assets requires permission.
 
 ---
