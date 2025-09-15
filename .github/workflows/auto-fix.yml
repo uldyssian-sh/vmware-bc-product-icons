@@ -1,4 +1,4 @@
-name: Auto Fix Issues
+name: Unified Auto Fix
 on:
   schedule:
     - cron: '0 2 * * 1'  # Weekly Monday 2AM
@@ -10,24 +10,31 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      security-events: write
+    
     steps:
-      - uses: actions/checkout@v4
-      - name: Auto-fix common issues
-        run: |
-          # Fix shell scripts
-          find . -name "*.sh" -exec shellcheck --format=diff {} \; | patch -p1 || true
-          # Fix YAML
-          yamllint --format parsable . | while read line; do
-            file=$(echo "$line" | cut -d: -f1)
-            sed -i 's/[[:space:]]*$//' "$file" 2>/dev/null || true
-          done
-          # Fix Terraform
-          terraform fmt -recursive . || true
-      - name: Create PR if changes
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'Auto-fix: Code quality improvements'
-          title: 'Auto-fix: Code quality improvements'
-          body: 'Automated fixes for linting and formatting issues'
-          branch: auto-fix/improvements
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Security & Quality Fixes
+      run: |
+        # Security fixes
+        npm audit fix --force 2>/dev/null || true
+        pip install --upgrade pip safety 2>/dev/null && safety check --auto-fix 2>/dev/null || true
+        bundle audit --update 2>/dev/null || true
+        
+        # Code quality fixes
+        terraform fmt -recursive . 2>/dev/null || true
+        find . -name "*.yml" -o -name "*.yaml" | xargs -I {} sed -i 's/[[:space:]]*$//' {} 2>/dev/null || true
+        find . -name "*.sh" -exec shellcheck --format=diff {} \; | patch -p1 2>/dev/null || true
+    
+    - name: Create PR if changes
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: 'auto-fix: security and quality improvements'
+        title: 'Auto-fix: Weekly Security & Quality Updates'
+        body: 'Automated fixes for security vulnerabilities, dependencies, and code quality issues'
+        branch: auto-fix/weekly
+        delete-branch: true
