@@ -1,4 +1,4 @@
-name: Fully Auto Fix
+name: Safe Auto Fix
 on:
   schedule:
     - cron: '0 2 * * 1'
@@ -10,26 +10,19 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-      security-events: write
     
     steps:
     - uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Security & Quality Fixes
+    - name: Safe fixes only
       run: |
-        npm audit fix --force 2>/dev/null || true
-        pip install --upgrade pip safety 2>/dev/null && safety check --auto-fix 2>/dev/null || true
-        bundle audit --update 2>/dev/null || true
         terraform fmt -recursive . 2>/dev/null || true
         find . -name "*.yml" -o -name "*.yaml" | xargs -I {} sed -i 's/[[:space:]]*$//' {} 2>/dev/null || true
-        find . -name "*.sh" -exec shellcheck --format=diff {} \; | patch -p1 2>/dev/null || true
-    
-    - name: Auto-commit fixes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "Auto-fix Bot"
-        git add -A
-        git diff --staged --quiet || git commit -m "auto-fix: security and quality improvements"
-        git push || true
+        
+    - name: Create PR for review
+      uses: peter-evans/create-pull-request@v5
+      with:
+        title: 'Auto-fix: Safe formatting only'
+        body: 'Only safe formatting changes - no dependency updates'
+        branch: auto-fix/safe
+        auto-merge-method: squash
