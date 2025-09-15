@@ -1,0 +1,33 @@
+name: Auto Fix Issues
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # Weekly Monday 2AM
+  workflow_dispatch:
+
+jobs:
+  auto-fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Auto-fix common issues
+        run: |
+          # Fix shell scripts
+          find . -name "*.sh" -exec shellcheck --format=diff {} \; | patch -p1 || true
+          # Fix YAML
+          yamllint --format parsable . | while read line; do
+            file=$(echo "$line" | cut -d: -f1)
+            sed -i 's/[[:space:]]*$//' "$file" 2>/dev/null || true
+          done
+          # Fix Terraform
+          terraform fmt -recursive . || true
+      - name: Create PR if changes
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'Auto-fix: Code quality improvements'
+          title: 'Auto-fix: Code quality improvements'
+          body: 'Automated fixes for linting and formatting issues'
+          branch: auto-fix/improvements
