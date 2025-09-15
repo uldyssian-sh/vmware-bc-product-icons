@@ -55,3 +55,10 @@ If you would like to add more Broadcom / VMware product icons or update existing
 - Redistribution of official or trademarked assets requires permission.
 
 ---
+
+## 📦 Large Files Notice
+
+The VMware icons ZIP file has been optimized for better repository performance. 
+For the complete icon package, please check the [Releases](https://github.com/uldyssian-sh/vmware-bc-product-icons/releases) section.
+
+
