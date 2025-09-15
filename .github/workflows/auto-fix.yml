@@ -1,7 +1,7 @@
-name: Unified Auto Fix
+name: Fully Auto Fix
 on:
   schedule:
-    - cron: '0 2 * * 1'  # Weekly Monday 2AM
+    - cron: '0 2 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -19,22 +19,17 @@ jobs:
     
     - name: Security & Quality Fixes
       run: |
-        # Security fixes
         npm audit fix --force 2>/dev/null || true
         pip install --upgrade pip safety 2>/dev/null && safety check --auto-fix 2>/dev/null || true
         bundle audit --update 2>/dev/null || true
-        
-        # Code quality fixes
         terraform fmt -recursive . 2>/dev/null || true
         find . -name "*.yml" -o -name "*.yaml" | xargs -I {} sed -i 's/[[:space:]]*$//' {} 2>/dev/null || true
         find . -name "*.sh" -exec shellcheck --format=diff {} \; | patch -p1 2>/dev/null || true
     
-    - name: Create PR if changes
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: 'auto-fix: security and quality improvements'
-        title: 'Auto-fix: Weekly Security & Quality Updates'
-        body: 'Automated fixes for security vulnerabilities, dependencies, and code quality issues'
-        branch: auto-fix/weekly
-        delete-branch: true
+    - name: Auto-commit fixes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Auto-fix Bot"
+        git add -A
+        git diff --staged --quiet || git commit -m "auto-fix: security and quality improvements"
+        git push || true
