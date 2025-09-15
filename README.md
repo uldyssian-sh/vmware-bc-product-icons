@@ -1,5 +1,22 @@
 # 🖼️ VMware-BC Product Icons
 
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
+
+## Prerequisites
+
+Before using this project, ensure you have:
+- Required tools and dependencies
+- Proper access credentials
+- System requirements met
+
+
 > 👤 Author: LT • 📝 Version: 1.0
 
 ---
@@ -61,4 +78,20 @@ If you would like to add more Broadcom / VMware product icons or update existing
 The VMware icons ZIP file has been optimized for better repository performance. 
 For the complete icon package, please check the [Releases](https://github.com/uldyssian-sh/vmware-bc-product-icons/releases) section.
 
+## Contributing
 
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+- How to submit issues
+- How to propose changes
+- Code style guidelines
+- Review process
+
+## Support
+
+- 📖 [Wiki Documentation](../../wiki)
+- 💬 [Discussions](../../discussions)
+- 🐛 [Issue Tracker](../../issues)
+- 🔒 [Security Policy](SECURITY.md)
+
+---
+**Made with ❤️ for the community**
