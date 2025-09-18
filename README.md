@@ -140,10 +140,10 @@ unzip -l vmware-icons.zip | grep -E '\.png$' | wc -l
 
 ## 📚 Related Resources
 
-- [VMware Brand Guidelines](https://www.vmware.com/brand)
-- [Broadcom Brand Assets](https://www.broadcom.com/company/legal/brand-guidelines)
-- [VMware Product Documentation](https://docs.vmware.com)
-- [Architecture Best Practices](https://core.vmware.com/resource/vmware-validated-design)
+- [VMware Official Site](https://www.vmware.com)
+- [Broadcom Official Site](https://www.broadcom.com)
+- [VMware Documentation](https://docs.vmware.com)
+- [VMware Community](https://communities.vmware.com)
 
 ## 🤝 Contributing
 
@@ -161,7 +161,6 @@ Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidel
 This project is licensed under the [MIT License](LICENSE).
 
 **Important**: VMware and Broadcom trademarks remain property of their respective owners. This collection is for reference and educational purposes.
->>>>>>> a1fd075 (feat: comprehensive repository audit and enterprise-grade automation)
 
 ## 🆘 Support
 
