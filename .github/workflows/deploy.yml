@@ -21,7 +21,7 @@ jobs:
       - uses: actions/configure-pages@v4
       - name: Build development site
         run: |
-          mkdir _site
+          mkdir -p _site
           cat > _site/index.html << 'HTML'
 <!DOCTYPE html>
 <html>
@@ -41,11 +41,11 @@ jobs:
         <h1>vmware-bc-product-icons</h1>
         <p class="status">✅ Development deployment successful</p>
         <p><strong>Environment:</strong> Development</p>
-        <p><strong>Repository:</strong> uldyssian-sh/vmware-bc-product-icons</p>
+        <p><strong>Repository:</strong> ${{ github.repository }}</p>
         <p><strong>Deployed:</strong> <span id="time"></span></p>
         <div class="links">
-            <a href="https://github.com/uldyssian-sh/vmware-bc-product-icons">View Repository</a>
-            <a href="https://github.com/uldyssian-sh/vmware-bc-product-icons/blob/main/README.md">Documentation</a>
+            <a href="https://github.com/${{ github.repository }}">View Repository</a>
+            <a href="https://github.com/${{ github.repository }}/blob/main/README.md">Documentation</a>
         </div>
     </div>
     <script>document.getElementById('time').textContent = new Date().toLocaleString();</script>

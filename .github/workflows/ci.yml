@@ -1,17 +1,51 @@
 name: CI
+
 on:
   push:
     branches: [main, master]
   pull_request:
     branches: [main, master]
+  schedule:
+    - cron: '0 2 * * 0'  # Weekly on Sunday at 2:00 AM UTC
+  workflow_dispatch:
+
+env:
+  FORCE_COLOR: 1
+
 jobs:
-  test:
+  validate:
+    name: Validate Repository
     runs-on: ubuntu-latest
+    timeout-minutes: 2
+    
     steps:
-    - uses: actions/checkout@v3
-    - name: Basic validation
-      run: |
-        echo "Repository: ${{ github.repository }}"
-        echo "Branch: ${{ github.ref }}"
-        ls -la
-        echo "CI passed successfully"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      - name: Validate repository structure
+        run: |
+          set -euo pipefail
+          echo "🔍 Repository: ${{ github.repository }}"
+          echo "🌿 Branch: ${{ github.ref_name }}"
+          echo "📊 Event: ${{ github.event_name }}"
+          
+          # Validate required files
+          required_files=("README.md" "LICENSE" "package.json" "requirements.txt")
+          for file in "${required_files[@]}"; do
+            if [[ -f "$file" ]]; then
+              echo "✅ $file exists"
+            else
+              echo "❌ $file missing"
+              exit 1
+            fi
+          done
+          
+          # Check ZIP file integrity
+          if [[ -f "vmware-icons.zip" ]]; then
+            echo "📦 Validating ZIP file..."
+            unzip -t vmware-icons.zip > /dev/null && echo "✅ ZIP file is valid" || (echo "❌ ZIP file corrupted" && exit 1)
+          fi
+          
+          echo "🎉 All validations passed successfully!"

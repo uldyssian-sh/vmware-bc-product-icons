@@ -14,9 +14,13 @@ Thumbs.db
 *.swo
 *~
 
-# Logs
+# Logs and temporary files
 *.log
 logs/
+*.tmp
+*.cache
+tmp/
+temp/
 
 # Runtime data
 pids
@@ -27,40 +31,84 @@ pids
 # Dependency directories
 node_modules/
 vendor/
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Optional npm cache directory
+# Package managers
 .npm
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
+.yarn/
+.pnp.*
 .yarn-integrity
+package-lock.json
+yarn.lock
 
-# dotenv environment variables file
+# Environment files (SECURITY)
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
 
-# Temporary folders
-tmp/
-temp/
+# Secrets and credentials (SECURITY)
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+config/secrets.yml
+secrets.json
 
 # Build outputs
 dist/
 build/
-*.zip
+*.tgz
 *.tar.gz
 
+# Extracted icons (keep ZIP only)
+extracted/
+icons/
+*.png
+!vmware-icons.zip
+
+# Testing
+coverage/
+.nyc_output
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Documentation builds
+docs/_build/
+site/
+
 # Performance optimization
-*.log
-*.tmp
 *.cache
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-node_modules/
-.vscode/settings.json
-.idea/
+.eslintcache
+.stylelintcache
+
+# Security scanning results
+.snyk
+security-report.json
+vulnerability-report.json
+
+# GitHub specific
+.github/workflows/*.log
+
+# macOS specific
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows specific
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux specific
+*~
+.fuse_hidden*
+.directory
+.Trash-*
