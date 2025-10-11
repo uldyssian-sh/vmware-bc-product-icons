@@ -179,3 +179,13 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 **Maintained by**: [uldyssian-sh](https://github.com/uldyssian-sh) | **Last Updated**: December 2024
+
+## Support
+
+- **Issues**: [GitHub Issues](https://github.com/uldyssian-sh/vmware-bc-product-icons/issues)
+- **Security**: [Security Policy](SECURITY.md)
+- **Contributing**: [Contributing Guidelines](CONTRIBUTING.md)
+
+---
+
+**⭐ Star this repository if you find it helpful!**
