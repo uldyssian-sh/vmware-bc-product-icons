@@ -3,7 +3,6 @@
 [![License](https://img.shields.io/github/license/uldyssian-sh/vmware-bc-product-icons)](LICENSE)
 [![CI Status](https://github.com/uldyssian-sh/vmware-bc-product-icons/workflows/CI/badge.svg)](https://github.com/uldyssian-sh/vmware-bc-product-icons/actions)
 [![Security Scan](https://github.com/uldyssian-sh/vmware-bc-product-icons/workflows/Security%20Scan/badge.svg)](https://github.com/uldyssian-sh/vmware-bc-product-icons/actions)
-[![Trivy Scan](https://github.com/uldyssian-sh/vmware-bc-product-icons/workflows/Security/badge.svg)](https://github.com/uldyssian-sh/vmware-bc-product-icons/security/code-scanning)
 [![GitHub Issues](https://img.shields.io/github/issues/uldyssian-sh/vmware-bc-product-icons)](https://github.com/uldyssian-sh/vmware-bc-product-icons/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/uldyssian-sh/vmware-bc-product-icons)](https://github.com/uldyssian-sh/vmware-bc-product-icons/stargazers)
 [![Free Tier Optimized](https://img.shields.io/badge/GitHub-Free%20Tier%20Optimized-green)](FREE-TIER-OPTIMIZATION.md)
