@@ -3,56 +3,15 @@ name: Deploy Development
 on:
   push:
     branches: [main, master]
-  workflow_dispatch:
+  pull_request:
+    branches: [main, master]
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  security-events: write
+  actions: read
 
-jobs:
-  deploy-dev:
-    runs-on: ubuntu-latest
-    environment:
-      name: development
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/configure-pages@v4
-      - name: Build development site
-        run: |
-          mkdir -p _site
-          cat > _site/index.html << 'HTML'
-<!DOCTYPE html>
-<html>
-<head>
-    <title>vmware-bc-product-icons - Development</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background: #f0f8ff; }
-        .dev-banner { background: #ffd700; padding: 10px; text-align: center; font-weight: bold; }
-        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .status { color: #28a745; font-weight: bold; }
-        .links a { display: inline-block; margin: 10px; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
-    </style>
-</head>
-<body>
-    <div class="dev-banner">🚧 DEVELOPMENT ENVIRONMENT 🚧</div>
-    <div class="container">
-        <h1>vmware-bc-product-icons</h1>
-        <p class="status">✅ Development deployment successful</p>
-        <p><strong>Environment:</strong> Development</p>
-        <p><strong>Repository:</strong> ${{ github.repository }}</p>
-        <p><strong>Deployed:</strong> <span id="time"></span></p>
-        <div class="links">
-            <a href="https://github.com/${{ github.repository }}">View Repository</a>
-            <a href="https://github.com/${{ github.repository }}/blob/main/README.md">Documentation</a>
-        </div>
-    </div>
-    <script>document.getElementById('time').textContent = new Date().toLocaleString();</script>
-</body>
-</html>
-HTML
-      - uses: actions/upload-pages-artifact@v3
-      - name: Deploy to Development
-        id: deployment
-        uses: actions/deploy-pages@v4
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+

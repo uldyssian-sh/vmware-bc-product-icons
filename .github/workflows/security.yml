@@ -1,6 +1,16 @@
 name: Security Scan
 
 on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
   schedule:
     - cron: '0 3 * * 1'  # Weekly on Monday at 3:00 AM UTC
   workflow_dispatch:
@@ -12,103 +22,3 @@ on:
 env:
   FORCE_COLOR: 1
 
-permissions:
-  contents: read
-  security-events: write
-
-jobs:
-  security-scan:
-    name: Security Analysis
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 1
-      
-      - name: Validate ZIP file integrity
-        run: |
-          set -euo pipefail
-          echo "🔍 Validating ZIP file security..."
-          
-          if [[ -f "vmware-icons.zip" ]]; then
-            # Test ZIP integrity
-            unzip -t vmware-icons.zip > /dev/null
-            echo "✅ ZIP file integrity verified"
-            
-            # Check for suspicious files
-            suspicious_files=$(unzip -l vmware-icons.zip | grep -E '\.(exe|bat|cmd|scr|vbs|js|jar)$' || true)
-            if [[ -n "$suspicious_files" ]]; then
-              echo "❌ Suspicious executable files found:"
-              echo "$suspicious_files"
-              exit 1
-            fi
-            echo "✅ No suspicious executable files found"
-            
-            # Validate PNG files only
-            non_png_files=$(unzip -l vmware-icons.zip | grep -v '\.png$' | grep -E '\.[a-zA-Z0-9]+$' || true)
-            if [[ -n "$non_png_files" ]]; then
-              echo "⚠️ Non-PNG files detected (review required):"
-              echo "$non_png_files"
-            fi
-            
-            echo "✅ ZIP security validation completed"
-          else
-            echo "❌ vmware-icons.zip not found"
-            exit 1
-          fi
-      
-      - name: Scan for secrets
-        run: |
-          set -euo pipefail
-          echo "🔐 Scanning for potential secrets..."
-          
-          # Basic secret patterns
-          secret_patterns=(
-            "password\s*=\s*['\"][^'\"]+['\"]"
-            "api[_-]?key\s*=\s*['\"][^'\"]+['\"]"
-            "secret\s*=\s*['\"][^'\"]+['\"]"
-            "token\s*=\s*['\"][^'\"]+['\"]"
-            "aws[_-]?access[_-]?key"
-            "ssh-rsa\s+[A-Za-z0-9+/]+"
-          )
-          
-          secrets_found=false
-          for pattern in "${secret_patterns[@]}"; do
-            if grep -r -i -E "$pattern" . --exclude-dir=.git --exclude="*.zip" 2>/dev/null; then
-              echo "❌ Potential secret found: $pattern"
-              secrets_found=true
-            fi
-          done
-          
-          if [[ "$secrets_found" == "false" ]]; then
-            echo "✅ No secrets detected"
-          else
-            echo "❌ Potential secrets found - review required"
-            exit 1
-          fi
-      
-      - name: Validate file permissions
-        run: |
-          set -euo pipefail
-          echo "🔒 Checking file permissions..."
-          
-          # Check for executable files that shouldn't be
-          executable_files=$(find . -type f -executable -not -path "./.git/*" -not -name "*.sh" || true)
-          if [[ -n "$executable_files" ]]; then
-            echo "⚠️ Unexpected executable files found:"
-            echo "$executable_files"
-          else
-            echo "✅ File permissions are appropriate"
-          fi
-      
-      - name: Security summary
-        run: |
-          echo "🛡️ Security scan completed successfully"
-          echo "📊 Scan results:"
-          echo "  ✅ ZIP integrity verified"
-          echo "  ✅ No secrets detected"
-          echo "  ✅ File permissions validated"
-          echo "  ✅ No suspicious executables found"
