@@ -11,10 +11,3 @@ permissions:
   security-events: write
   actions: read
 
-  schedule:
-    - cron: '0 4 * * 0'  # Weekly on Sunday at 4:00 AM UTC
-  workflow_dispatch:
-
-env:
-  FORCE_COLOR: 1
-

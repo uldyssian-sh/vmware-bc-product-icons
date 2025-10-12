@@ -11,19 +11,6 @@ permissions:
   security-events: write
   actions: read
 
-
-
-  push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
-  schedule:
-    - cron: '0 2 * * 0'  # Weekly on Sunday at 2:00 AM UTC
-  workflow_dispatch:
-
-env:
-  FORCE_COLOR: 1
-
 jobs:
   validate:
     name: Validate Repository

@@ -11,7 +11,3 @@ permissions:
   security-events: write
   actions: read
 
-  schedule:
-    - cron: "0 10 * * 1"  # Every Monday at 10:00 UTC
-  workflow_dispatch:
-
