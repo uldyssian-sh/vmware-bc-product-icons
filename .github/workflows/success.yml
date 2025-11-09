@@ -1,7 +1,0 @@
-name: Success
-on: [push, pull_request]
-jobs:
-  success:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "SUCCESS"
