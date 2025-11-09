@@ -181,4 +181,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-**Maintained by**: [uldyssian-sh](https://github.com/uldyssian-sh) | **Last Updated**: October 2025

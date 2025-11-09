@@ -22,7 +22,6 @@ This project exists thanks to all the people who contribute to maintaining and i
 
 ### Icon Sources & Attribution
 - **VMware Community** - Original product iconography
-- **Broadcom Design Team** - Updated brand assets
 - **Enterprise Users** - Feedback and requirements gathering
 
 ### Technical Contributors
@@ -99,4 +98,3 @@ Contributors are recognized through:
 
 **Want to contribute?** Check out our [Contributing Guidelines](CONTRIBUTING.md) to get started!
 
-**Last Updated**: December 2024# Updated 20251109_123810
