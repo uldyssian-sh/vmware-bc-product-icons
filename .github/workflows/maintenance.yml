@@ -11,3 +11,11 @@ permissions:
   security-events: write
   actions: read
 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - name: Workflow completed
+      run: echo "✅ Workflow completed successfully"
