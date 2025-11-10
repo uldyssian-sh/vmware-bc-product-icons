@@ -65,27 +65,6 @@ unzip -t vmware-icons.zip
 unzip -l vmware-icons.zip
 ```
 
-## 📋 Usage Guidelines
-
-### ✅ Permitted Uses
-- Enterprise documentation
-- Technical presentations
-- Architecture diagrams
-- Educational materials
-- Internal company use
-
-### ❌ Restrictions
-- Commercial redistribution
-- Trademark infringement
-- Unauthorized branding
-- Modification without attribution
-
-### 🎯 Best Practices
-- Use original aspect ratios
-- Maintain transparent backgrounds
-- Include proper attribution
-- Follow VMware brand guidelines
-
 ## 🔧 Technical Specifications
 
 | Property | Value |
