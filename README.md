@@ -123,7 +123,20 @@ unzip -l vmware-icons.zip | grep -E '\.png$' | wc -l
 
 ### Documentation (Markdown)
 ```markdown
-![vSphere](icons/vsphere-icon.png)
+# VMware Architecture Diagram
+
+## Core Infrastructure
+![vSphere](icons/vsphere-icon.png) **vSphere** - Virtualization Platform
+![ESXi](icons/esxi-icon.png) **ESXi** - Hypervisor
+![vCenter](icons/vcenter-icon.png) **vCenter** - Management Platform
+
+## Storage & Networking
+![vSAN](icons/vsan-icon.png) **vSAN** - Software-Defined Storage
+![NSX](icons/nsx-icon.png) **NSX** - Network Virtualization
+
+## Cloud Management
+![Aria Operations](icons/aria-operations-icon.png) **Aria Operations**
+![Tanzu](icons/tanzu-icon.png) **Tanzu Kubernetes**
 ```
 
 ### Web Applications
