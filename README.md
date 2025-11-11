@@ -6,6 +6,12 @@
 [![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
 [![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
 
+[![License](https://img.shields.io/github/license/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)](#)
+[![Languages](https://img.shields.io/github/languages/count/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
+[![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
+[![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
+
 [![License](https://img.shields.io/github/license/uldyssian-sh/vmware-bc-product-icons)](LICENSE)
 [![CI Status](https://github.com/uldyssian-sh/vmware-bc-product-icons/workflows/CI/badge.svg)](https://github.com/uldyssian-sh/vmware-bc-product-icons/actions)
 [![Security Scan](https://github.com/uldyssian-sh/vmware-bc-product-icons/workflows/Security%20Scan/badge.svg)](https://github.com/uldyssian-sh/vmware-bc-product-icons/actions)
@@ -117,17 +123,10 @@ unzip -l vmware-icons.zip | grep -E '\.png$' | wc -l
 # VMware Architecture Diagram
 
 ## Core Infrastructure
-![vSphere](icons/vsphere-icon.png) **vSphere** - Virtualization Platform
-![ESXi](icons/esxi-icon.png) **ESXi** - Hypervisor
-![vCenter](icons/vcenter-icon.png) **vCenter** - Management Platform
 
 ## Storage & Networking
-![vSAN](icons/vsan-icon.png) **vSAN** - Software-Defined Storage
-![NSX](icons/nsx-icon.png) **NSX** - Network Virtualization
 
 ## Cloud Management
-![Aria Operations](icons/aria-operations-icon.png) **Aria Operations**
-![Tanzu](icons/tanzu-icon.png) **Tanzu Kubernetes**
 ```
 
 ### Web Applications
@@ -178,10 +177,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📈 Repository Stats
 
-![Repository Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-bc-product-icons)
-![Last Commit](https://img.shields.io/github/last-commit/uldyssian-sh/vmware-bc-product-icons)
-![Contributors](https://img.shields.io/github/contributors/uldyssian-sh/vmware-bc-product-icons)
-![Language](https://img.shields.io/github/languages/top/uldyssian-sh/vmware-bc-product-icons)
 
 ---
 
