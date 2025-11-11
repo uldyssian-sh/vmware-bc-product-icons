@@ -6,164 +6,24 @@
 [![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
 [![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
 
-## 🎨 Overview
-
-Comprehensive collection of **VMware Broadcom product icons** in high-quality PNG format with transparent backgrounds. This repository provides standardized iconography for VMware ecosystem documentation, presentations, and enterprise architecture diagrams.
-
-**Repository Type:** Icon Library  
-**Format:** PNG (Transparent Background)  
-**Use Cases:** Documentation, Presentations, Architecture Diagrams
-
-## 📦 What's Included
-
-The `vmware-icons.zip` archive contains **50+ high-quality product icons** including:
-
-### Core VMware Products
-- **vSphere** - Virtualization platform
-- **vCenter** - Management platform
-- **ESXi** - Hypervisor
-- **vSAN** - Software-defined storage
-- **NSX** - Network virtualization
-
-### Cloud & Automation
-- **Aria Operations** - Cloud management
-- **Aria Automation** - Infrastructure automation
-- **Cloud Director** - Multi-tenant cloud
-- **Tanzu** - Kubernetes platform
-
-### Security & Compliance
-- **Carbon Black** - Endpoint security
-- **AppDefense** - Application security
-- **Identity Manager** - Identity services
-
-### Emerging Technologies
-- **Antrea** - Container networking
-- **Broadcom** - Corporate branding
-- **AVI Networks** - Load balancing
-
-## 🚀 Quick Start
-
-### Download Icons
-
-```bash
-# Clone repository
-
 [![License](https://img.shields.io/github/license/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](LICENSE)
 [![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)](#)
 [![Languages](https://img.shields.io/github/languages/count/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
 [![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
 [![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
-git clone https://github.com/uldyssian-sh/vmware-bc-product-icons.git
-cd vmware-bc-product-icons
 
-# Extract icons
+## Overview
+
+Collection of VMware Broadcom product icons in PNG format.
+
+## Download
+
+```bash
+git clone https://github.com/uldyssian-sh/vmware-bc-product-icons.git
 unzip vmware-icons.zip
 ```
 
-### Verify Archive Integrity
+## License
 
-```bash
-# Test ZIP file integrity
-unzip -t vmware-icons.zip
-
-# List all icons
-unzip -l vmware-icons.zip
-```
-
-## 🔧 Technical Specifications
-
-| Property | Value |
-|----------|-------|
-| **Format** | PNG with transparency |
-| **Resolution** | Variable (optimized) |
-| **Color Space** | sRGB |
-| **Compression** | Lossless |
-| **Background** | Transparent |
-| **Total Size** | ~2.5MB compressed |
-
-## 📊 Icon Inventory
-
-```bash
-# View complete icon list
-unzip -l vmware-icons.zip | grep -E '\.png$' | wc -l
-# Output: 50+ icons
-```
-
-### Categories
-- **Compute**: 15 icons
-- **Storage**: 8 icons  
-- **Network**: 12 icons
-- **Security**: 10 icons
-- **Cloud**: 8 icons
-- **Management**: 7 icons
-
-## 🛠️ Integration Examples
-
-### PowerPoint/Keynote
-1. Extract icons from ZIP
-2. Insert as images
-3. Maintain transparency
-4. Scale proportionally
-
-### Documentation (Markdown)
-```markdown
-# VMware Architecture Diagram
-
-## Core Infrastructure
-
-## Storage & Networking
-
-## Cloud Management
-```
-
-### Web Applications
-```html
-<img src="icons/vcenter-icon.png" alt="vCenter" width="64" height="64">
-```
-
-## 🔍 Quality Assurance
-
-- ✅ **Automated Testing** - Weekly ZIP integrity checks
-- ✅ **Format Validation** - PNG format verification
-- ✅ **Size Optimization** - Compressed for efficiency
-- ✅ **Transparency Check** - Background removal verified
-- ✅ **Security Scanning** - Trivy vulnerability scanning
-- ✅ **Code Quality** - Automated CI/CD pipeline
-- ✅ **Dependency Updates** - Regular security updates
-
-## 📚 Related Resources
-
-- [VMware Official Site](https://www.vmware.com)
-- [Broadcom Official Site](https://www.broadcom.com)
-- [VMware Documentation](https://docs.vmware.com)
-- [VMware Community](https://communities.vmware.com)
-
-## 🤝 Contributing
-
-Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-### Icon Submission Process
-1. Ensure high quality (300+ DPI)
-2. Remove backgrounds properly
-3. Follow naming conventions
-4. Test transparency
-5. Submit via Pull Request
-
-## 📄 License & Legal
-
-This project is licensed under the [MIT License](LICENSE).
-
-**Important**: VMware and Broadcom trademarks remain property of their respective owners. This collection is for reference and educational purposes.
-
-## 🆘 Support
-
-- 🐛 **Issues**: [GitHub Issues](https://github.com/uldyssian-sh/vmware-bc-product-icons/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/uldyssian-sh/vmware-bc-product-icons/discussions)
-- 📧 **Contact**: Create an issue for support
-- 🛡️ **Security**: [Security Policy](SECURITY.md)
-
-## 📈 Repository Stats
-
-
----
+MIT License - see [LICENSE](LICENSE) file.
 
