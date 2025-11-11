@@ -1,5 +1,11 @@
 # VMware Broadcom Product Icons Collection
 
+[![License](https://img.shields.io/github/license/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)](#)
+[![Languages](https://img.shields.io/github/languages/count/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
+[![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
+[![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
+
 [![License](https://img.shields.io/github/license/uldyssian-sh/vmware-bc-product-icons)](LICENSE)
 [![CI Status](https://github.com/uldyssian-sh/vmware-bc-product-icons/workflows/CI/badge.svg)](https://github.com/uldyssian-sh/vmware-bc-product-icons/actions)
 [![Security Scan](https://github.com/uldyssian-sh/vmware-bc-product-icons/workflows/Security%20Scan/badge.svg)](https://github.com/uldyssian-sh/vmware-bc-product-icons/actions)
@@ -48,6 +54,12 @@ The `vmware-icons.zip` archive contains **50+ high-quality product icons** inclu
 
 ```bash
 # Clone repository
+
+[![License](https://img.shields.io/github/license/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)](#)
+[![Languages](https://img.shields.io/github/languages/count/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
+[![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
+[![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
 git clone https://github.com/uldyssian-sh/vmware-bc-product-icons.git
 cd vmware-bc-product-icons
 
