@@ -6,19 +6,6 @@
 [![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
 [![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
 
-[![License](https://img.shields.io/github/license/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)](#)
-[![Languages](https://img.shields.io/github/languages/count/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
-[![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-bc-product-icons?style=flat-square)](#)
-[![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
-
-[![License](https://img.shields.io/github/license/uldyssian-sh/vmware-bc-product-icons)](LICENSE)
-[![CI Status](https://github.com/uldyssian-sh/vmware-bc-product-icons/workflows/CI/badge.svg)](https://github.com/uldyssian-sh/vmware-bc-product-icons/actions)
-[![Security Scan](https://github.com/uldyssian-sh/vmware-bc-product-icons/workflows/Security%20Scan/badge.svg)](https://github.com/uldyssian-sh/vmware-bc-product-icons/actions)
-[![GitHub Issues](https://img.shields.io/github/issues/uldyssian-sh/vmware-bc-product-icons)](https://github.com/uldyssian-sh/vmware-bc-product-icons/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/uldyssian-sh/vmware-bc-product-icons)](https://github.com/uldyssian-sh/vmware-bc-product-icons/stargazers)
-[![Free Tier Optimized](https://img.shields.io/badge/GitHub-Free%20Tier%20Optimized-green)](FREE-TIER-OPTIMIZATION.md)
-
 ## 🎨 Overview
 
 Comprehensive collection of **VMware Broadcom product icons** in high-quality PNG format with transparent backgrounds. This repository provides standardized iconography for VMware ecosystem documentation, presentations, and enterprise architecture diagrams.
