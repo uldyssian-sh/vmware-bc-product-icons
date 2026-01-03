@@ -1,1 +1,7 @@
-# Workflow Trigger - Wed Sep 17 20:44:50 CEST 2025
+# Workflow Trigger
+Repository: vmware-bc-product-icons
+Triggered: Sat Jan  3 22:10:43 CET 2026
+Purpose: Activate actions-user contributor
+
+This file triggers the contributors workflow to activate actions-user.
+After workflow runs, actions-user will appear in contributors list.
