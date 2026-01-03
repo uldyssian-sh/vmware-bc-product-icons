@@ -14,3 +14,4 @@ unzip vmware-icons.zip
 ## License
 
 MIT License - see [LICENSE](LICENSE) file.
+⭐ Star this repository if you find it helpful!
