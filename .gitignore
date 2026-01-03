@@ -112,3 +112,6 @@ $RECYCLE.BIN/
 .fuse_hidden*
 .directory
 .Trash-*
+
+# Security - Sensitive Files
+config.json
